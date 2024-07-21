@@ -1,0 +1,95 @@
+<div>
+    <p style="position:absolute; left:310px; top:px; width:auto; height:210px;">only for you </p>
+</div>
+<div style="max-width: 700px; margin: 30px auto; padding: 15px; line-height: 1.7; color: red;">
+    <p>要永远开心</p>
+
+</div>
+
+<div class="heart"> </div>
+
+<div class="heart" style="position:absolute; left:580px; top:0px; width:auto; height:210px;"></div>
+
+<div class="heart" style="position:absolute; left:580px; top:150px; width:auto; height:210px;"></div>
+
+<h1 style="position:absolute; left:280px; top:155px; width:auto; height:210px;">你喜欢我吗?</h1>
+<div id="By" style="position:absolute; left:285px; top:235px;">
+    <input type="button" value=" 是的！ " onclick="f1()">
+</div>
+<div id="Bn" style="position:absolute; left:360px; top:235px;">
+    <input type="button" value=" 喜欢个锤子！ " onmouseover="f()" onclick="f2()">
+</div>
+
+
+
+<div class="heart" style="position:absolute; left:1px; top:1px;"> </div>
+
+
+<div class="heart" style="position:absolute; left:315px; top:155px; width:auto; height:210px;"></div>
+
+<div style="background-color: #f1f1f1; text-align: center; padding=400: px; font-size: 12px;">
+    <p style="position:absolute; left:329px; top:620px;">
+        不开心就去看电视吧
+    </p>
+    <a style="position:absolute; left:350px; top:650px;" href="https://smyy93.com/">点这里跳转哦</a>
+</div>
+<style>
+    .heart {
+      position: relative;
+      width: 300px;
+      height: 250px;
+    }
+    .heart:before,
+    .heart:after {
+      position: absolute;
+      content: "";
+      left: 50px;
+      top: 130;
+      width: 50px;
+      height: 80px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+    .heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+</style>
+
+<script>
+    function f1(){
+      alert("太好啦，我也喜欢你！！！") 
+    } 
+    var flag=1;
+    function f(){ 
+      var Bn = document.getElementById('Bn');
+      var aWidth= document.body.clientWidth || document.documentElement.clientWidth;
+      var aHeight= document.body.clientHeight || document.documentElement.clientHeight;
+      var sJs1=Math.floor(Math.random()*aHeight);
+      var sJs2=Math.floor(Math.random()*aWidth);
+      if(flag==1){
+        Bn.style.top=sJs1 + 'px';
+        Bn.style.left=sJs2+'px'; 
+        flag=2;
+    
+      }else if(flag==2){
+        Bn.style.top=sJs1+'px';
+        Bn.style.left=sJs2+'px';
+        flag=3;
+      }else if(flag==3){
+        Bn.style.top=235 + 'px';
+        Bn.style.left=286 + 'px';
+        flag=4;
+      }else if(flag==4){
+        Bn.style.top=235 + 'px';
+        Bn.style.left=360 + 'px';
+        flag=1;
+      }
+    }
+    function f2(){
+      alert('这不是你的真心话！');
+    }
+</script>
